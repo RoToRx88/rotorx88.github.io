@@ -2,14 +2,15 @@
 
 name: RoToR
 paginate: 25
-paginate_path: "/posts/page/:num/"
-url: # add site url http://example.com/
-blog_theme: light # Or use dark
+url: https://rotorx88.github.io # add your site url (format: http://example.com/)
+blog_theme: dark # Or use dark
 
 # Optional settings
 
+about_enabled: false # Change to true if you wish to show an icon in the navigation that redirects to the about page
 discus_identifier: # Add your Disqus identifier
 ga_analytics: # Add your GA Tracking Id
+local_fonts: false # Change to true if you wish to use local fonts
 rss_enabled: true # Change to false if not
 social:
   dribbble: # Add your Dribbble handle
@@ -24,9 +25,6 @@ social:
 # Important settings (change at own risk)
 
 assets:
-  compress:
-    css: true
-    js: true
   features:
     automatic_img_size: false
   sources:
@@ -61,4 +59,6 @@ gems:
   - jekyll-assets
   - jekyll-paginate
   - jekyll-sitemap
+  - jemoji
+paginate_path: "/posts/page/:num/"
 permalink: posts/:slug

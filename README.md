@@ -18,6 +18,7 @@ Features:
   - Cross browser support (supports all modern browsers).
   - Media embed for videos.
   - Enlarge images on click (like Medium).
+  - Support for local fonts
 
 Integrations
   - [Google Analytics](https://analytics.google.com/analytics/web/)
@@ -43,7 +44,16 @@ Used tools
 
 ### Installation
 
-If you haven't installed Ruby then go ahead and install it with: `brew install Ruby`.
+If you haven't installed the following tools then go ahead and do so (make sure you have [Homebrew](http://brew.sh/) installed):
+
+    brew install ruby
+    brew install npm
+
+On windows, install Ruby and Node with the installers found here:
+
+  - [Ruby](https://rubyinstaller.org/)  
+  - [Node.js](https://nodejs.org/en/download/)
+
 Next setup your environment:
 
     bin/setup
@@ -54,11 +64,13 @@ Run Jekyll:
 
     bundle exec jekyll serve
 
-### Deploy to GitHub Pages
+## Deploy to GitHub Pages
 
-Run this in the root project folder in your console:
+Before you deploy, commit your changes to any working branch except the `gh-pages` one then run the following command:
 
     bin/deploy
+
+**Important note**: Chalk does not support the standard way of Jekyll hosting on GitHub Pages. You need to deploy your working branch with the `bin/deploy` script. This is because Chalk uses Jekyll plugins that aren't supported by GitHub pages.
 
 You can find more info on how to use the gh-pages branch and a custom domain [here](https://help.github.com/articles/quick-start-setting-up-a-custom-domain/).
 
